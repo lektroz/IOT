@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		addrulepath="/administrator/components/com_iot/models/rules"
+		addfieldpath="/administrator/components/com_iot/models/fields"
+		name="global_config"
+		label="COM_IOT_CONFIG_GLOBAL_LABEL"
+		description="COM_IOT_CONFIG_GLOBAL_DESC">
+		<field
+			name="check_in"
+			type="list"
+			default="0"
+			label="COM_IOT_CONFIG_CHECK_TIMER_LABEL"
+			description="COM_IOT_CONFIG_CHECK_TIMER_DESC">
+			<option
+				value="-5 hours">COM_IOT_CONFIG_CHECK_TIMER_OPTION_ONE</option>
+			<option
+				value="-12 hours">COM_IOT_CONFIG_CHECK_TIMER_OPTION_TWO</option>
+			<option
+				value="-1 day">COM_IOT_CONFIG_CHECK_TIMER_OPTION_THREE</option>
+			<option
+				value="-2 day">COM_IOT_CONFIG_CHECK_TIMER_OPTION_FOUR</option>
+			<option
+				value="-1 week">COM_IOT_CONFIG_CHECK_TIMER_OPTION_FIVE</option>
+			<option
+				value="0">COM_IOT_CONFIG_CHECK_TIMER_OPTION_SIX</option>
+		</field>
+		<field type="spacer" name="spacerAuthor" hr="true" />
+		<field
+			name="save_history"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
+			description="JGLOBAL_SAVE_HISTORY_OPTIONS_DESC"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="history_limit"
+			type="text"
+			filter="integer"
+			label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
+			description="JGLOBAL_HISTORY_LIMIT_OPTIONS_DESC"
+			default="10"
+		/>
+		<field type="spacer" name="spacerHistory" hr="true" />
+		<field name="autorTitle"
+			type="spacer"
+			label="COM_IOT_CONFIG_AUTHOR"
+		/>
+		<field name="autorName"
+			type="text"
+			label="COM_IOT_CONFIG_AUTHOR_NAME_LABEL"
+			description="COM_IOT_CONFIG_AUTHOR_NAME_DESC"
+			size="60"
+			default="Lucas Manurung"
+			readonly="true"
+			class="readonly"
+		/>
+		<field name="autorEmail"
+			type="email"
+			label="COM_IOT_CONFIG_AUTHOR_EMAIL_LABEL"
+			description="COM_IOT_CONFIG_AUTHOR_EMAIL_DESC"
+			size="60"
+			default="Lucas@instrumentasi.id"
+			readonly="true"
+			class="readonly"
+		/>
+	</fieldset>
+	<fieldset
+		name="board_custom_config"
+		label="COM_IOT_CONFIG_BOARD">
+
+		<!-- Board_menu Field. Type: Menuitem. (joomla) -->
+		<field
+			type="menuitem"
+			name="board_menu"
+			label="COM_IOT_CONFIG_BOARD_MENU_LABEL"
+			description="COM_IOT_CONFIG_BOARD_MENU_DESCRIPTION"
+			published="1"
+			filter="int"
+		/>
+	</fieldset>
+	<fieldset
+		name="library_custom_config"
+		label="COM_IOT_CONFIG_LIBRARY">
+
+		<!-- Uikit_select Field. Type: Radio. (joomla) -->
+		<field
+			type="radio"
+			name="uikit_select"
+			label="COM_IOT_CONFIG_UIKIT_SELECT_LABEL"
+			description="COM_IOT_CONFIG_UIKIT_SELECT_DESCRIPTION"
+			class="btn-group btn-group-yesno"
+			default="1"
+			readonly="false"
+			disabled="false">
+			<!-- Option Set. -->
+			<option value="1">
+				COM_IOT_CONFIG_ENABLE</option>
+			<option value="0">
+				COM_IOT_CONFIG_DISABLE</option>
+		</field>
+		<!-- Uikit_css Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="uikit_css"
+			label="COM_IOT_CONFIG_UIKIT_CSS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css"
+			description="COM_IOT_CONFIG_UIKIT_CSS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_UIKIT_CSS_MESSAGE"
+			hint="COM_IOT_CONFIG_UIKIT_CSS_HINT"
+			autocomplete="on"
+			showon="uikit_select:1"
+		/>
+		<!-- Uikit_js Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="uikit_js"
+			label="COM_IOT_CONFIG_UIKIT_JS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"
+			description="COM_IOT_CONFIG_UIKIT_JS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_UIKIT_JS_MESSAGE"
+			hint="COM_IOT_CONFIG_UIKIT_JS_HINT"
+			autocomplete="on"
+			showon="uikit_select:1"
+		/>
+		<!-- Uikit_js_icon Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="uikit_js_icon"
+			label="COM_IOT_CONFIG_UIKIT_JS_ICON_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"
+			description="COM_IOT_CONFIG_UIKIT_JS_ICON_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_UIKIT_JS_ICON_MESSAGE"
+			hint="COM_IOT_CONFIG_UIKIT_JS_ICON_HINT"
+			autocomplete="on"
+			showon="uikit_select:1"
+		/>
+		<!-- Bootstrap_select Field. Type: Radio. (joomla) -->
+		<field
+			type="radio"
+			name="bootstrap_select"
+			label="COM_IOT_CONFIG_BOOTSTRAP_SELECT_LABEL"
+			description="COM_IOT_CONFIG_BOOTSTRAP_SELECT_DESCRIPTION"
+			class="btn-group btn-group-yesno"
+			default="0"
+			readonly="false"
+			disabled="false">
+			<!-- Option Set. -->
+			<option value="1">
+				COM_IOT_CONFIG_ENABLE</option>
+			<option value="0">
+				COM_IOT_CONFIG_DISABLE</option>
+		</field>
+		<!-- Bootstrap_css Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="bootstrap_css"
+			label="COM_IOT_CONFIG_BOOTSTRAP_CSS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			description="COM_IOT_CONFIG_BOOTSTRAP_CSS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_BOOTSTRAP_CSS_MESSAGE"
+			hint="COM_IOT_CONFIG_BOOTSTRAP_CSS_HINT"
+			autocomplete="on"
+			showon="bootstrap_select:1"
+		/>
+		<!-- Bootstrap_js Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="bootstrap_js"
+			label="COM_IOT_CONFIG_BOOTSTRAP_JS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			description="COM_IOT_CONFIG_BOOTSTRAP_JS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_BOOTSTRAP_JS_MESSAGE"
+			hint="COM_IOT_CONFIG_BOOTSTRAP_JS_HINT"
+			autocomplete="on"
+			showon="bootstrap_select:1"
+		/>
+		<!-- Chartjs_select Field. Type: Radio. (joomla) -->
+		<field
+			type="radio"
+			name="chartjs_select"
+			label="COM_IOT_CONFIG_CHARTJS_SELECT_LABEL"
+			description="COM_IOT_CONFIG_CHARTJS_SELECT_DESCRIPTION"
+			class="btn-group btn-group-yesno"
+			default="1"
+			readonly="false"
+			disabled="false">
+			<!-- Option Set. -->
+			<option value="1">
+				COM_IOT_CONFIG_ENABLE</option>
+			<option value="0">
+				COM_IOT_CONFIG_DISABLE</option>
+		</field>
+		<!-- Chart_css Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="chart_css"
+			label="COM_IOT_CONFIG_CHART_CSS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+			description="COM_IOT_CONFIG_CHART_CSS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_CHART_CSS_MESSAGE"
+			hint="COM_IOT_CONFIG_CHART_CSS_HINT"
+			autocomplete="on"
+			showon="chartjs_select:1"
+		/>
+		<!-- Chart_js Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="chart_js"
+			label="COM_IOT_CONFIG_CHART_JS_LABEL"
+			size="50"
+			maxlength="255"
+			default="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+			description="COM_IOT_CONFIG_CHART_JS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_CHART_JS_MESSAGE"
+			hint="COM_IOT_CONFIG_CHART_JS_HINT"
+			autocomplete="on"
+			showon="chartjs_select:1"
+		/>
+		<!-- Fonticon_select Field. Type: Radio. (joomla) -->
+		<field
+			type="radio"
+			name="fonticon_select"
+			label="COM_IOT_CONFIG_FONTICON_SELECT_LABEL"
+			description="COM_IOT_CONFIG_FONTICON_SELECT_DESCRIPTION"
+			class="btn-group btn-group-yesno"
+			default="1"
+			readonly="false"
+			disabled="false">
+			<!-- Option Set. -->
+			<option value="1">
+				COM_IOT_CONFIG_ENABLE</option>
+			<option value="0">
+				COM_IOT_CONFIG_DISABLE</option>
+		</field>
+		<!-- Fonticon_css Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="fonticon_css"
+			label="COM_IOT_CONFIG_FONTICON_CSS_LABEL"
+			size="50"
+			maxlength="255"
+			default=""
+			description="COM_IOT_CONFIG_FONTICON_CSS_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_CONFIG_FONTICON_CSS_MESSAGE"
+			hint="COM_IOT_CONFIG_FONTICON_CSS_HINT"
+			autocomplete="on"
+			showon="fonticon_select:1"
+		/>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC">
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_iot"
+			section="component"
+		/>
+	</fieldset>
+</config>

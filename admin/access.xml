@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_iot">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.options" title="JACTION_OPTIONS" description="JACTION_OPTIONS_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.export" title="COM_IOT_EXPORT_DATA" description="COM_IOT_EXPORT_DATA_DESC" />
+		<action name="core.import" title="COM_IOT_IMPORT_DATA" description="COM_IOT_IMPORT_DATA_DESC" />
+		<action name="core.batch" title="COM_IOT_USE_BATCH" description="COM_IOT_USE_BATCH_DESC" />
+		<action name="core.version" title="COM_IOT_EDIT_VERSIONS" description="COM_IOT_EDIT_VERSIONS_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.edit.created_by" title="COM_IOT_EDIT_CREATED_BY" description="COM_IOT_EDIT_CREATED_BY_DESC" />
+		<action name="core.edit.created" title="COM_IOT_EDIT_CREATED_DATE" description="COM_IOT_EDIT_CREATED_DATE_DESC" />
+		<action name="alarm_tag.access" title="COM_IOT_ALARM_TAGS_ACCESS" description="COM_IOT_ALARM_TAGS_ACCESS_DESC" />
+		<action name="alarm_tag.batch" title="COM_IOT_ALARM_TAGS_BATCH_USE" description="COM_IOT_ALARM_TAGS_BATCH_USE_DESC" />
+		<action name="alarm_tag.dashboard_list" title="COM_IOT_ALARM_TAGS_DASHBOARD_LIST" description="COM_IOT_ALARM_TAGS_DASHBOARD_LIST_DESC" />
+		<action name="alarm_tag.version" title="COM_IOT_ALARM_TAGS_EDIT_VERSION" description="COM_IOT_ALARM_TAGS_EDIT_VERSION_DESC" />
+		<action name="alarm_tag.export" title="COM_IOT_ALARM_TAGS_EXPORT" description="COM_IOT_ALARM_TAGS_EXPORT_DESC" />
+		<action name="alarm_tag.import" title="COM_IOT_ALARM_TAGS_IMPORT" description="COM_IOT_ALARM_TAGS_IMPORT_DESC" />
+		<action name="alarm_tag.submenu" title="COM_IOT_ALARM_TAGS_SUBMENU" description="COM_IOT_ALARM_TAGS_SUBMENU_DESC" />
+		<action name="site.board.access" title="COM_IOT_BOARD_ACCESS_SITE" description="COM_IOT_BOARD_ACCESS_SITE_DESC" />
+		<action name="site.boards.access" title="COM_IOT_BOARD_LIST_ACCESS_SITE" description="COM_IOT_BOARD_LIST_ACCESS_SITE_DESC" />
+		<action name="board.access" title="COM_IOT_BOARDS_ACCESS" description="COM_IOT_BOARDS_ACCESS_DESC" />
+		<action name="board.batch" title="COM_IOT_BOARDS_BATCH_USE" description="COM_IOT_BOARDS_BATCH_USE_DESC" />
+		<action name="board.dashboard_list" title="COM_IOT_BOARDS_DASHBOARD_LIST" description="COM_IOT_BOARDS_DASHBOARD_LIST_DESC" />
+		<action name="board.version" title="COM_IOT_BOARDS_EDIT_VERSION" description="COM_IOT_BOARDS_EDIT_VERSION_DESC" />
+		<action name="board.export" title="COM_IOT_BOARDS_EXPORT" description="COM_IOT_BOARDS_EXPORT_DESC" />
+		<action name="board.import" title="COM_IOT_BOARDS_IMPORT" description="COM_IOT_BOARDS_IMPORT_DESC" />
+		<action name="board.submenu" title="COM_IOT_BOARDS_SUBMENU" description="COM_IOT_BOARDS_SUBMENU_DESC" />
+		<action name="data_alarm.access" title="COM_IOT_DATA_ALARMS_ACCESS" description="COM_IOT_DATA_ALARMS_ACCESS_DESC" />
+		<action name="data_alarm.batch" title="COM_IOT_DATA_ALARMS_BATCH_USE" description="COM_IOT_DATA_ALARMS_BATCH_USE_DESC" />
+		<action name="data_alarm.version" title="COM_IOT_DATA_ALARMS_EDIT_VERSION" description="COM_IOT_DATA_ALARMS_EDIT_VERSION_DESC" />
+		<action name="data_alarm.export" title="COM_IOT_DATA_ALARMS_EXPORT" description="COM_IOT_DATA_ALARMS_EXPORT_DESC" />
+		<action name="data_alarm.import" title="COM_IOT_DATA_ALARMS_IMPORT" description="COM_IOT_DATA_ALARMS_IMPORT_DESC" />
+		<action name="data_alarm.submenu" title="COM_IOT_DATA_ALARMS_SUBMENU" description="COM_IOT_DATA_ALARMS_SUBMENU_DESC" />
+		<action name="data_input.access" title="COM_IOT_DATA_INPUTS_ACCESS" description="COM_IOT_DATA_INPUTS_ACCESS_DESC" />
+		<action name="data_input.batch" title="COM_IOT_DATA_INPUTS_BATCH_USE" description="COM_IOT_DATA_INPUTS_BATCH_USE_DESC" />
+		<action name="data_input.dashboard_list" title="COM_IOT_DATA_INPUTS_DASHBOARD_LIST" description="COM_IOT_DATA_INPUTS_DASHBOARD_LIST_DESC" />
+		<action name="data_input.version" title="COM_IOT_DATA_INPUTS_EDIT_VERSION" description="COM_IOT_DATA_INPUTS_EDIT_VERSION_DESC" />
+		<action name="data_input.export" title="COM_IOT_DATA_INPUTS_EXPORT" description="COM_IOT_DATA_INPUTS_EXPORT_DESC" />
+		<action name="data_input.import" title="COM_IOT_DATA_INPUTS_IMPORT" description="COM_IOT_DATA_INPUTS_IMPORT_DESC" />
+		<action name="data_input.submenu" title="COM_IOT_DATA_INPUTS_SUBMENU" description="COM_IOT_DATA_INPUTS_SUBMENU_DESC" />
+		<action name="data_output.access" title="COM_IOT_DATA_OUTPUTS_ACCESS" description="COM_IOT_DATA_OUTPUTS_ACCESS_DESC" />
+		<action name="data_output.batch" title="COM_IOT_DATA_OUTPUTS_BATCH_USE" description="COM_IOT_DATA_OUTPUTS_BATCH_USE_DESC" />
+		<action name="data_output.dashboard_list" title="COM_IOT_DATA_OUTPUTS_DASHBOARD_LIST" description="COM_IOT_DATA_OUTPUTS_DASHBOARD_LIST_DESC" />
+		<action name="data_output.version" title="COM_IOT_DATA_OUTPUTS_EDIT_VERSION" description="COM_IOT_DATA_OUTPUTS_EDIT_VERSION_DESC" />
+		<action name="data_output.export" title="COM_IOT_DATA_OUTPUTS_EXPORT" description="COM_IOT_DATA_OUTPUTS_EXPORT_DESC" />
+		<action name="data_output.import" title="COM_IOT_DATA_OUTPUTS_IMPORT" description="COM_IOT_DATA_OUTPUTS_IMPORT_DESC" />
+		<action name="data_output.submenu" title="COM_IOT_DATA_OUTPUTS_SUBMENU" description="COM_IOT_DATA_OUTPUTS_SUBMENU_DESC" />
+		<action name="engineering_unit_list.access" title="COM_IOT_ENGINEERING_UNIT_LISTS_ACCESS" description="COM_IOT_ENGINEERING_UNIT_LISTS_ACCESS_DESC" />
+		<action name="engineering_unit_list.batch" title="COM_IOT_ENGINEERING_UNIT_LISTS_BATCH_USE" description="COM_IOT_ENGINEERING_UNIT_LISTS_BATCH_USE_DESC" />
+		<action name="engineering_unit_list.dashboard_list" title="COM_IOT_ENGINEERING_UNIT_LISTS_DASHBOARD_LIST" description="COM_IOT_ENGINEERING_UNIT_LISTS_DASHBOARD_LIST_DESC" />
+		<action name="engineering_unit_list.version" title="COM_IOT_ENGINEERING_UNIT_LISTS_EDIT_VERSION" description="COM_IOT_ENGINEERING_UNIT_LISTS_EDIT_VERSION_DESC" />
+		<action name="engineering_unit_list.export" title="COM_IOT_ENGINEERING_UNIT_LISTS_EXPORT" description="COM_IOT_ENGINEERING_UNIT_LISTS_EXPORT_DESC" />
+		<action name="engineering_unit_list.import" title="COM_IOT_ENGINEERING_UNIT_LISTS_IMPORT" description="COM_IOT_ENGINEERING_UNIT_LISTS_IMPORT_DESC" />
+		<action name="engineering_unit_list.submenu" title="COM_IOT_ENGINEERING_UNIT_LISTS_SUBMENU" description="COM_IOT_ENGINEERING_UNIT_LISTS_SUBMENU_DESC" />
+		<action name="event_tag.access" title="COM_IOT_EVENT_TAGS_ACCESS" description="COM_IOT_EVENT_TAGS_ACCESS_DESC" />
+		<action name="event_tag.batch" title="COM_IOT_EVENT_TAGS_BATCH_USE" description="COM_IOT_EVENT_TAGS_BATCH_USE_DESC" />
+		<action name="event_tag.dashboard_list" title="COM_IOT_EVENT_TAGS_DASHBOARD_LIST" description="COM_IOT_EVENT_TAGS_DASHBOARD_LIST_DESC" />
+		<action name="event_tag.version" title="COM_IOT_EVENT_TAGS_EDIT_VERSION" description="COM_IOT_EVENT_TAGS_EDIT_VERSION_DESC" />
+		<action name="event_tag.export" title="COM_IOT_EVENT_TAGS_EXPORT" description="COM_IOT_EVENT_TAGS_EXPORT_DESC" />
+		<action name="event_tag.import" title="COM_IOT_EVENT_TAGS_IMPORT" description="COM_IOT_EVENT_TAGS_IMPORT_DESC" />
+		<action name="event_tag.submenu" title="COM_IOT_EVENT_TAGS_SUBMENU" description="COM_IOT_EVENT_TAGS_SUBMENU_DESC" />
+		<action name="io_list.access" title="COM_IOT_IO_LISTS_ACCESS" description="COM_IOT_IO_LISTS_ACCESS_DESC" />
+		<action name="io_list.batch" title="COM_IOT_IO_LISTS_BATCH_USE" description="COM_IOT_IO_LISTS_BATCH_USE_DESC" />
+		<action name="io_list.dashboard_list" title="COM_IOT_IO_LISTS_DASHBOARD_LIST" description="COM_IOT_IO_LISTS_DASHBOARD_LIST_DESC" />
+		<action name="io_list.version" title="COM_IOT_IO_LISTS_EDIT_VERSION" description="COM_IOT_IO_LISTS_EDIT_VERSION_DESC" />
+		<action name="io_list.export" title="COM_IOT_IO_LISTS_EXPORT" description="COM_IOT_IO_LISTS_EXPORT_DESC" />
+		<action name="io_list.import" title="COM_IOT_IO_LISTS_IMPORT" description="COM_IOT_IO_LISTS_IMPORT_DESC" />
+		<action name="io_list.submenu" title="COM_IOT_IO_LISTS_SUBMENU" description="COM_IOT_IO_LISTS_SUBMENU_DESC" />
+	</section>
+	<section name="board">
+		<action name="board.version" title="COM_IOT_BOARDS_EDIT_VERSION" description="COM_IOT_BOARDS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="io_list">
+		<action name="io_list.version" title="COM_IOT_IO_LISTS_EDIT_VERSION" description="COM_IOT_IO_LISTS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="engineering_unit_list">
+		<action name="engineering_unit_list.version" title="COM_IOT_ENGINEERING_UNIT_LISTS_EDIT_VERSION" description="COM_IOT_ENGINEERING_UNIT_LISTS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="alarm_tag">
+		<action name="alarm_tag.version" title="COM_IOT_ALARM_TAGS_EDIT_VERSION" description="COM_IOT_ALARM_TAGS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="event_tag">
+		<action name="event_tag.version" title="COM_IOT_EVENT_TAGS_EDIT_VERSION" description="COM_IOT_EVENT_TAGS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="data_input">
+		<action name="data_input.version" title="COM_IOT_DATA_INPUTS_EDIT_VERSION" description="COM_IOT_DATA_INPUTS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="data_output">
+		<action name="data_output.version" title="COM_IOT_DATA_OUTPUTS_EDIT_VERSION" description="COM_IOT_DATA_OUTPUTS_EDIT_VERSION_DESC" />
+	</section>
+	<section name="data_alarm">
+		<action name="data_alarm.version" title="COM_IOT_DATA_ALARMS_EDIT_VERSION" description="COM_IOT_DATA_ALARMS_EDIT_VERSION_DESC" />
+	</section>
+</access>
