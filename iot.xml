@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>COM_IOT</name>
+	<creationDate>17th September, 2019</creationDate>
+	<author>Lucas Manurung</author>
+	<authorEmail>Lucas@instrumentasi.id</authorEmail>
+	<authorUrl>https://instrumentasi.id</authorUrl>
+	<copyright>Copyright (C) 2019. All Rights Reserved Lucas Manurung</copyright>
+	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>1.0.21</version>
+	<description><![CDATA[
+		<h1>IoT (v.1.0.21)</h1>
+		<div style="clear: both;"></div>
+		<p></p>
+		<p>Created by <a href="https://instrumentasi.id" target="_blank">Lucas Manurung</a><br /><small>Development started 20th August, 2019</small></p>
+	]]></description>
+
+	<!-- Runs on install; New in Joomla 1.5 -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall; New in Joomla 1.5 -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<media destination="com_iot" folder="media">
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+
+	<!-- Update Schema; New in Joomla 2.5 -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>iot.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>layouts</folder>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_iot.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_iot.sys.ini</language>
+	</languages>
+
+	<administration>
+		<menu>COM_IOT_MENU</menu>
+		<submenu>
+			<!-- Instead of link you can specify individual link attributes -->
+			<menu option="com_iot" view="boards">COM_IOT_MENU_BOARDS</menu>
+			<menu option="com_iot" view="io_lists">COM_IOT_MENU_IO_LISTS</menu>
+			<menu option="com_iot" view="engineering_unit_lists">COM_IOT_MENU_ENGINEERING_UNIT_LISTS</menu>
+			<menu option="com_iot" view="alarm_tags">COM_IOT_MENU_ALARM_TAGS</menu>
+			<menu option="com_iot" view="event_tags">COM_IOT_MENU_EVENT_TAGS</menu>
+			<menu option="com_iot" view="data_inputs">COM_IOT_MENU_DATA_INPUTS</menu>
+			<menu option="com_iot" view="data_outputs">COM_IOT_MENU_DATA_OUTPUTS</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>iot.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>layouts</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_iot.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_iot.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

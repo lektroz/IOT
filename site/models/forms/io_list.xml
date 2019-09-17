@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_iot/models/rules"
+	addfieldpath="/administrator/components/com_iot/models/fields"
+>
+	<fieldset name="details">
+		<!-- Default Fields. -->
+		<!-- Id Field. Type: Text (joomla) -->
+		<field
+			name="id"
+			type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+			readonly="true"
+		/>
+		<!-- Date Created Field. Type: Calendar (joomla) -->
+		<field
+			name="created"
+			type="calendar"
+			label="COM_IOT_IO_LIST_CREATED_DATE_LABEL"
+			description="COM_IOT_IO_LIST_CREATED_DATE_DESC"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+		<!-- User Created Field. Type: User (joomla) -->
+		<field
+			name="created_by"
+			type="user"
+			label="COM_IOT_IO_LIST_CREATED_BY_LABEL"
+			description="COM_IOT_IO_LIST_CREATED_BY_DESC"
+		/>
+		<!-- Published Field. Type: List (joomla) -->
+		<field name="published" type="list" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC" class="chzn-color-state"
+			filter="intval" size="1" default="1" >
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+		<!-- Date Modified Field. Type: Calendar (joomla) -->
+		<field name="modified" type="calendar" class="readonly"
+			label="COM_IOT_IO_LIST_MODIFIED_DATE_LABEL" description="COM_IOT_IO_LIST_MODIFIED_DATE_DESC"
+			size="22" readonly="true" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		<!-- User Modified Field. Type: User (joomla) -->
+		<field name="modified_by" type="user"
+			label="COM_IOT_IO_LIST_MODIFIED_BY_LABEL"
+			description="COM_IOT_IO_LIST_MODIFIED_BY_DESC"
+			class="readonly"
+			readonly="true"
+			filter="unset"
+		/>
+		<!-- Access Field. Type: Accesslevel (joomla) -->
+		<field name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			default="1"
+			required="false"
+		/>
+		<!-- Ordering Field. Type: Numbers (joomla) -->
+		<field
+			name="ordering"
+			type="number"
+			class="inputbox validate-ordering"
+			label="COM_IOT_IO_LIST_ORDERING_LABEL"
+			description=""
+			default="0"
+			size="6"
+			required="false"
+		/>
+		<!-- Version Field. Type: Text (joomla) -->
+		<field
+			name="version"
+			type="text"
+			class="readonly"
+			label="COM_IOT_IO_LIST_VERSION_LABEL"
+			description="COM_IOT_IO_LIST_VERSION_DESC"
+			size="6"
+			readonly="true"
+			filter="unset"
+		/>
+		<!-- Metakey Field. Type: Textarea (joomla) -->
+		<field
+			name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			rows="3"
+			cols="30"
+		/>
+		<!-- Metadesc Field. Type: Textarea (joomla) -->
+		<field
+			name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			rows="3"
+			cols="30"
+		/>
+		<!-- Dynamic Fields. -->
+		<!-- Name Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="name"
+			label="COM_IOT_IO_LIST_NAME_LABEL"
+			size="40"
+			maxlength="150"
+			description="COM_IOT_IO_LIST_NAME_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="true"
+			filter="STRING"
+			message="COM_IOT_IO_LIST_NAME_MESSAGE"
+			hint="COM_IOT_IO_LIST_NAME_HINT"
+		/>
+		<!-- Boardname Field. Type: Boardname. (custom) -->
+		<field
+			type="boardname"
+			name="boardname"
+			label="COM_IOT_IO_LIST_BOARDNAME_LABEL"
+			description="COM_IOT_IO_LIST_BOARDNAME_DESCRIPTION"
+			class="list_class"
+			multiple="false"
+			default="0"
+			required="true"
+			button="true"
+		/>
+		<!-- Engineering_unit Field. Type: Engineeringunit. (custom) -->
+		<field
+			type="engineeringunit"
+			name="engineering_unit"
+			label="COM_IOT_IO_LIST_ENGINEERING_UNIT_LABEL"
+			class="list_class"
+			multiple="false"
+			default=""
+			required="true"
+		/>
+		<!-- Scaling Field. Type: List. (joomla) -->
+		<field
+			type="list"
+			name="scaling"
+			label="COM_IOT_IO_LIST_SCALING_LABEL"
+			description="COM_IOT_IO_LIST_SCALING_DESCRIPTION"
+			class="list_class"
+			multiple="false"
+			useglobal="false"
+			default="0">
+			<!-- Option Set. -->
+			<option value="0">
+				COM_IOT_IO_LIST_RAW</option>
+			<option value="1">
+				COM_IOT_IO_LIST_TWO_POINT_TWO</option>
+			<option value="2">
+				COM_IOT_IO_LIST_GAIN_OFFSET</option>
+		</field>
+		<!-- Datatype Field. Type: List. (joomla) -->
+		<field
+			type="list"
+			name="datatype"
+			label="COM_IOT_IO_LIST_DATATYPE_LABEL"
+			class="list_class"
+			multiple="false"
+			required="true"
+			default="0">
+			<!-- Option Set. -->
+			<option value="0">
+				COM_IOT_IO_LIST_INTEGER</option>
+			<option value="1">
+				COM_IOT_IO_LIST_FLOAT</option>
+			<option value="2">
+				COM_IOT_IO_LIST_STRING</option>
+			<option value="3">
+				COM_IOT_IO_LIST_BOOLEAN</option>
+		</field>
+		<!-- Description Field. Type: Textarea. (joomla) -->
+		<field
+			type="textarea"
+			name="description"
+			label="COM_IOT_IO_LIST_DESCRIPTION_LABEL"
+			rows="11"
+			cols="10"
+			description="COM_IOT_IO_LIST_DESCRIPTION_DESCRIPTION"
+			class="text_area span12"
+			filter="HTML"
+			hint="COM_IOT_IO_LIST_DESCRIPTION_HINT"
+		/>
+		<!-- Alias Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="alias"
+			label="COM_IOT_IO_LIST_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			filter="STRING"
+			hint="COM_IOT_IO_LIST_ALIAS_HINT"
+		/>
+		<!-- Io Field. Type: List. (joomla) -->
+		<field
+			type="list"
+			name="io"
+			label="COM_IOT_IO_LIST_IO_LABEL"
+			description="COM_IOT_IO_LIST_IO_DESCRIPTION"
+			class="list_class"
+			multiple="false"
+			useglobal="false"
+			default="0">
+			<!-- Option Set. -->
+			<option value="0">
+				COM_IOT_IO_LIST_OUTPUT</option>
+			<option value="1">
+				COM_IOT_IO_LIST_INPUT</option>
+		</field>
+		<!-- Offset Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="offset"
+			label="COM_IOT_IO_LIST_OFFSET_LABEL"
+			size="10"
+			maxlength="50"
+			default="1"
+			description="COM_IOT_IO_LIST_OFFSET_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="true"
+			required="false"
+			filter="FLOAT"
+			validate="number"
+			message="COM_IOT_IO_LIST_OFFSET_MESSAGE"
+			hint="COM_IOT_IO_LIST_OFFSET_HINT"
+			showon="scaling:2"
+		/>
+		<!-- Gain Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="gain"
+			label="COM_IOT_IO_LIST_GAIN_LABEL"
+			size="10"
+			maxlength="50"
+			default="1"
+			description="COM_IOT_IO_LIST_GAIN_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="true"
+			required="false"
+			filter="FLOAT"
+			validate="number"
+			message="COM_IOT_IO_LIST_GAIN_MESSAGE"
+			hint="COM_IOT_IO_LIST_GAIN_HINT"
+			showon="scaling:2"
+		/>
+		<!-- Pointtwo Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="pointtwo"
+			label="COM_IOT_IO_LIST_POINTTWO_LABEL"
+			size="10"
+			maxlength="50"
+			default="100"
+			description="COM_IOT_IO_LIST_POINTTWO_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="FLOAT"
+			validate="number"
+			message="COM_IOT_IO_LIST_POINTTWO_MESSAGE"
+			hint="COM_IOT_IO_LIST_POINTTWO_HINT"
+			autocomplete="on"
+			showon="scaling:1"
+		/>
+		<!-- Pointone Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="pointone"
+			label="COM_IOT_IO_LIST_POINTONE_LABEL"
+			size="10"
+			maxlength="50"
+			default="0"
+			description="COM_IOT_IO_LIST_POINTONE_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="FLOAT"
+			validate="number"
+			message="COM_IOT_IO_LIST_POINTONE_MESSAGE"
+			hint="COM_IOT_IO_LIST_POINTONE_HINT"
+			autocomplete="on"
+			showon="scaling:1"
+		/>
+		<!-- Max Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="max"
+			label="COM_IOT_IO_LIST_MAX_LABEL"
+			size="10"
+			maxlength="50"
+			default="Some text"
+			description="COM_IOT_IO_LIST_MAX_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_IO_LIST_MAX_MESSAGE"
+			hint="COM_IOT_IO_LIST_MAX_HINT"
+			autocomplete="on"
+			showon="datatype:0[OR]datatype:1[AND]io:1"
+		/>
+		<!-- Min Field. Type: Text. (joomla) -->
+		<field
+			type="text"
+			name="min"
+			label="COM_IOT_IO_LIST_MIN_LABEL"
+			size="10"
+			maxlength="50"
+			default=""
+			description="COM_IOT_IO_LIST_MIN_DESCRIPTION"
+			class="text_area"
+			readonly="false"
+			disabled="false"
+			required="false"
+			filter="STRING"
+			message="COM_IOT_IO_LIST_MIN_MESSAGE"
+			hint="COM_IOT_IO_LIST_MIN_HINT"
+			autocomplete="on"
+			showon="datatype:0[OR]datatype:1[AND]io:1"
+		/>
+	</fieldset>
+
+	<!-- Metadata Fields. -->
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<fieldset name="vdmmetadata"
+			label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+			<!-- Robots Field. Type: List (joomla) -->
+			<field name="robots"
+				type="list"
+				label="JFIELD_METADATA_ROBOTS_LABEL"
+				description="JFIELD_METADATA_ROBOTS_DESC" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+				<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+				<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+				<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+			</field>
+			<!-- Author Field. Type: Text (joomla) -->
+			<field name="author"
+				type="text"
+				label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC"
+				size="20"
+			/>
+			<!-- Rights Field. Type: Textarea (joomla) -->
+			<field name="rights" type="textarea" label="JFIELD_META_RIGHTS_LABEL"
+				description="JFIELD_META_RIGHTS_DESC" required="false" filter="string"
+				cols="30" rows="2"
+			/>
+		</fieldset>
+	</fields>
+	
+	<!-- Access Control Fields. -->
+	<fieldset name="accesscontrol">
+		<!-- Asset Id Field. Type: Hidden (joomla) -->
+		<field
+			name="asset_id"
+			type="hidden"
+			filter="unset"
+		/>
+		<!-- Rules Field. Type: Rules (joomla) -->
+		<field
+			name="rules"
+			type="rules"
+			label="Permissions in relation to this io_list"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_iot"
+			section="io_list"
+		/>
+	</fieldset>
+</form>

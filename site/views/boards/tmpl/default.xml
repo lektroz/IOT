@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<metadata>
+	<layout title="COM_IOT_MENU_BOARDS_TITLE" option="COM_IOT_MENU_BOARDS_OPTION">
+		<message>
+			<![CDATA[COM_IOT_MENU_BOARDS_DESC]]>
+		</message>
+	</layout>
+</metadata>
